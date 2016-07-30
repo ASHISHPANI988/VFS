@@ -5,6 +5,7 @@
 
 //extern struct Vfs vfs;
 
+
 int open_vfs(){
 	//FILE *fp;
 	//char a[MAXLEN];
@@ -21,6 +22,9 @@ int open_vfs(){
 	//Load header info into struct
 	rewind(vfs.vfs_fp);
 	fread(&vfs,sizeof(struct Vfs),1,vfs.vfs_fp);
+
+	//sort the vfs_files
+	qsort(vfs.header.vfs_files,vfs.header.vfs_info.num_files, sizeof(struct Vfs_File_Info), cmp_vfsfile);
 
 	//Initialize struct vfs
 	vfs.vfs_status=VFS_OPEN;

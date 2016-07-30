@@ -39,4 +39,6 @@ int close_vfs();
 int save_vfs(char*);
 int extract_vfs(char*);
 
+int cmp_vfsfile(const void * a, const void * b);
+
 #endif  /* VFS_H  */

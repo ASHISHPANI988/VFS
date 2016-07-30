@@ -19,16 +19,27 @@ int main()
 	else{
 		printf("\nOpening of Filesystem failed\n ");
 	}
-
+///////////////////////////////////////////////////////////////////////////
 	if(save_vfs("a.txt")==0){
-		printf("\nFile saved successfully\n");
+		printf("\na.txt File saved successfully\n");
 	}
 	else{
 		printf("\nSaving of file in Filesystem failed\n ");
 	}
-
-
-	if(extract_vfs("a.txt")==0){
+	if(save_vfs("ab.txt")==0){
+		printf("\nab.txt File saved successfully\n");
+	}
+	else{
+		printf("\nSaving of file in Filesystem failed\n ");
+	}
+	if(save_vfs("abc.txt")==0){
+		printf("\nabc.txt File saved successfully\n");
+	}
+	else{
+		printf("\nSaving of file in Filesystem failed\n ");
+	}
+////////////////////////////////////////////////////////////////////////////
+	if(extract_vfs("ab.txt")==0){
 		printf("\nFile extracted successfully\n");
 	}
 	else{

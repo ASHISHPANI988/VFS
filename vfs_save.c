@@ -44,6 +44,9 @@ int save_vfs(char *name){
 
 		fclose(fp);
 		rewind(vfs.vfs_fp);
+
+		//sort the vfs_files
+		qsort(vfs.header.vfs_files,vfs.header.vfs_info.num_files, sizeof(struct Vfs_File_Info), cmp_vfsfile);
 	}
 	return 0;
 }
