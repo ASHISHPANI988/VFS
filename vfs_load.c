@@ -14,7 +14,7 @@ int open_vfs(){
 	printf("Loading VFS  %s....\n",vfs.header.vfs_info.vfs_name);
 
 	//Open the VFS file
-	if( (vfs.vfs_fp=fopen("VFS.txt","wb+"))==NULL){
+	if( (vfs.vfs_fp=fopen("VFS.txt","rb+"))==NULL){
 		printf("Unable to load the filesystem\n");
 		exit(1);
 	}
